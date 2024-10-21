@@ -41,7 +41,7 @@ def create_emoji_filled_letter_text(instructions: list, emoji: str, scale_factor
     return '\n'.join(''.join(row) for row in reversed(grid))
 
 
-def get_emoji_text(text: str, emoji: str, font_path="GeistMonoVF.woff") -> list[str]:
+def get_emoji_text(text: str, emoji: str, font_path="fonts/GeistMonoVF.woff") -> list[str]:
     glyph_curves = get_glyph_curves(font_path, text)
     result = [create_emoji_filled_letter_text(instructions, emoji) for instructions in glyph_curves]
     return result

@@ -62,7 +62,7 @@ def merge_images(images: list) -> Image:
     return new_im
 
 
-def get_emoji_image(text: str, emoji: str, font_path: str="GeistMonoVF.woff") -> Image:
+def get_emoji_image(text: str, emoji: str, font_path: str="fonts/GeistMonoVF.woff") -> Image:
     glyph_curves = get_glyph_curves(font_path, text)
     images = []
     for instructions in glyph_curves:
