@@ -2,7 +2,6 @@ from src.emoji_text import get_emoji_text
 
 
 
-
 def convert_instructions_to_path(instructions):
     path = ""
     for instruction in instructions:
@@ -18,7 +17,6 @@ def convert_instructions_to_path(instructions):
     return path.strip()
 
 
-
 def main():
     font_path = "fonts/GeistMonoVF.woff"  
     text = "TEST"
@@ -27,6 +25,8 @@ def main():
     text_emojis = get_emoji_text(text=text, emoji=emoji, font_path=font_path)
     output = "\n\n".join(text_emojis)
     print(output)
+
+
 
 if __name__ == "__main__":
     main()
